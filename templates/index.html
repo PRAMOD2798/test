@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Influencer Network Analyzer</title>
+  <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <h1>Influencer Network Analyzer</h1>
+
+  <form id="uploadForm">
+    <input type="file" name="file" accept=".csv">
+    <button type="submit">Upload CSV</button>
+  </form>
+
+  <input type="text" id="startNode" placeholder="Start Node" />
+  <button onclick="runAlgo('bfs')">Run BFS</button>
+  <button onclick="runAlgo('dfs')">Run DFS</button>
+
+  <div id="output"></div>
+  <div id="network" style="height: 600px;"></div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
